@@ -1,0 +1,21 @@
+<div class="col-md-3 forecast-daily-container">
+  <a href="<%= forecast_daily_path(forecast_daily.id, city: city) %>" class="forecast-daily-block text-center">
+    <div class="date">
+      <%= forecast_daily.date.strftime("%m/%d/%Y") %>
+    </div>
+
+    <div class="wi-icon">
+      <%= icon_weather_for(forecast_daily.weather.icon) %>
+    </div>
+
+    <div class="day">
+      <%= forecast_daily.date.strftime("%A").upcase %>
+    </div>
+
+    <hr />
+
+    <div class="temperatures">
+      <i class="fa fa-arrow-down"></i> <%= forecast_daily.temperature.min.round %>˚C | <i class="fa fa-arrow-up"></i> <%= forecast_daily.temperature.max.round %>˚C
+    </div>
+  </a>
+</div>

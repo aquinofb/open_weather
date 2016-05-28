@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenWeather</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <div class="container">
+    <%= render "partials/page_top" %>
+    <%= yield %>
+  </div>
+
+  <hr />
+
+  <div class="text-center">© 2016 PlayON</div>
+  <br />
+
+  <%= javascript_include_tag 'application' %>
+</body>
+</html>

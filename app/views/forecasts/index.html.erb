@@ -1,0 +1,38 @@
+<% forecast_daily = @forecast.forecasts_daily.shift %>
+
+<div class="row">
+  <div class="forecast-container">
+    <div class="col-md-9">
+      <div class="city-name">
+        <%= @forecast.city.name %>
+      </div>
+
+      <div class="day">
+        <%= forecast_daily.date.strftime("%A").upcase %>
+      </div>
+
+      <div class="month-and-day">
+        <%= forecast_daily.date.strftime("%b").upcase %> <%= forecast_daily.date.strftime("%d").upcase %>
+      </div>
+    </div>
+
+    <div class="col-md-3" >
+      <div class="temperature text-right">
+          <%= forecast_daily.temperature.evening.round %>˚C
+      </div>
+
+      <div class="day-description">
+        <%= icon_weather_for(forecast_daily.weather.icon) %>
+        <span class="weather-desc"><%= forecast_daily.weather.description.capitalize %></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <% @forecast.forecasts_daily.each do |f_daily| %>
+    <%= render partial: "forecasts_daily/forecast_daily", locals: {forecast_daily: f_daily, city: @forecast.city.name} %>
+  <% end %>
+</div>

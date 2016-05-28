@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="forecast-container">
+    <div class="col-md-9">
+      <div class="city-name">
+        <%= params[:city] %>
+      </div>
+
+      <div class="day">
+        <%= @forecast_daily.date.strftime("%A").upcase %>
+      </div>
+
+      <div class="month-and-day">
+        <%= @forecast_daily.date.strftime("%b").upcase %> <%= @forecast_daily.date.strftime("%d").upcase %>
+      </div>
+    </div>
+
+    <div class="col-md-3" >
+      <div class="temperature text-right">
+          <%= @forecast_daily.temperature.evening.round %>˚C
+      </div>
+
+      <div class="day-description">
+        <%= icon_weather_for(@forecast_daily.weather.icon) %>
+        <span class="weather-desc"><%= @forecast_daily.weather.description.capitalize %></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-md-22">
+    <div class="panel panel-default" style="color: #696969">
+      <div class="panel-body">
+
+        <div class="page-header" style="margin-top: 0">
+          <h4>More Information</h4>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Pressure:</label>
+          <div class="">
+            <%= @forecast_daily.pressure %>hPa
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Humidity:</label>
+          <div class="">
+            <%= @forecast_daily.humidity %>%
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Wind Speed:</label>
+          <div class="">
+            <%= @forecast_daily.speed %>m/s
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Wind Direction:</label>
+          <div class="">
+            <%= @forecast_daily.degrees %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Clouds:</label>
+          <div class="">
+            <%= @forecast_daily.clouds %>%
+          </div>
+        </div>
+
+        <div class="page-header">
+          <h4>Temperatures</h4>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Average:</label>
+          <div class="">
+            <%= @forecast_daily.temperature.average.round %>˚C
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Min:</label>
+          <div class="">
+            <%= @forecast_daily.temperature.min.round %>˚C
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label text-right">Max:</label>
+          <div class="">
+            <%= @forecast_daily.temperature.max.round %>˚C
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
