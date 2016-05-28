@@ -1,5 +1,5 @@
 # Change these
-server '52.204.82.176', port: 22, roles: [:web, :app, :db], primary: true
+server '23.20.100.45', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:aquinofb/open_weather.git'
 set :application,     'open_weather'

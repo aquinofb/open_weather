@@ -29,7 +29,6 @@ gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'
-  gem 'dotenv-rails'
 end
 
 group :development do
@@ -45,3 +44,4 @@ end
 gem 'puma'
 gem 'execjs'
 gem 'therubyracer'
+gem 'dotenv-rails'
