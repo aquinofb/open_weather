@@ -29,6 +29,11 @@ set :ssh_options, {
   user: 'ubuntu'
 }
 
+set :default_env, {
+  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
+  'OPENWEATHER_KEY' => ENV['OPENWEATHER_KEY'],
+}
+
 ## Defaults:
 # set :scm,           :git
 # set :branch,        :master
