@@ -4,7 +4,7 @@
   </div>
 <% end %>
 
-<div class="col-lg-6">
+<div class="col-md-6">
   <%= form_for :filter, url: forecasts_path(), method: :get do |f| %>
     <div class="input-group">
       <%= f.text_field :city, class: "form-control", placeholder: "Type the City Name" %>
