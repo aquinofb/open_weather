@@ -16,8 +16,6 @@ gem 'uglifier', '>= 1.3.0'
 gem "font-awesome-rails"
 
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'rest-client', '~> 1.7'
 gem "rack-cors", require: "rack/cors"
 
