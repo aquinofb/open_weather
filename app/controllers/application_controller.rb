@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     def respond_with model
       respond_to do |format|
         format.html
-        format.json {render json: model}
+        format.json { render json: model, status: :ok }
       end
     end
 end

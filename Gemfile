@@ -29,6 +29,7 @@ gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.4'
 end
 
 group :development do
@@ -39,6 +40,10 @@ group :development do
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
+end
+
+group :test do
+  gem 'simplecov', :require => false
 end
 
 gem 'puma'
