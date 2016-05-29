@@ -1,5 +1,5 @@
 <div class="col-md-3 forecast-daily-container">
-  <a href="<%= forecast_daily_path(forecast_daily.id, city: city) %>" class="forecast-daily-block text-center">
+  <a href="<%= forecast_daily_path(forecast_daily.id, city: forecast_daily.city) %>" class="forecast-daily-block text-center">
     <div class="date">
       <%= forecast_daily.date.strftime("%m/%d/%Y") %>
     </div>

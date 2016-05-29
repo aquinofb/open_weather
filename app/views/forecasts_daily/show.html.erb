@@ -1,31 +1,4 @@
-<div class="row">
-  <div class="forecast-container">
-    <div class="col-md-9">
-      <div class="city-name">
-        <%= @forecast_daily.city %>
-      </div>
-
-      <div class="day">
-        <%= @forecast_daily.date.strftime("%A").upcase %>
-      </div>
-
-      <div class="month-and-day">
-        <%= @forecast_daily.date.strftime("%b").upcase %> <%= @forecast_daily.date.strftime("%d").upcase %>
-      </div>
-    </div>
-
-    <div class="col-md-3" >
-      <div class="temperature text-right">
-          <%= @forecast_daily.temperature.evening.round %>˚C
-      </div>
-
-      <div class="day-description">
-        <%= icon_weather_for(@forecast_daily.icon) %>
-        <span class="weather-desc"><%= @forecast_daily.description.capitalize %></span>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render partial: "partials/forecast_top", locals: { forecast_daily: @forecast_daily } %>
 
 <hr />
 
