@@ -45,7 +45,7 @@ RSpec.describe ForecastParser do
     }
 
     it "return a new Forecast" do
-      expect(ForecastParser.parse(params).class).to eq(Forecast)
+      expect(ForecastParser.parse(params).is_a?(Forecast)).to be_truthy
     end
   end
 end
