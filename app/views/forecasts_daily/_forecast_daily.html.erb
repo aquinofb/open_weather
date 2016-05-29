@@ -5,7 +5,7 @@
     </div>
 
     <div class="wi-icon">
-      <%= icon_weather_for(forecast_daily.weather.icon) %>
+      <%= icon_weather_for(forecast_daily.icon) %>
     </div>
 
     <div class="day">
@@ -15,7 +15,7 @@
     <hr />
 
     <div class="temperatures">
-      <i class="fa fa-arrow-down"></i> <%= forecast_daily.temperature.min.round %>˚C | <i class="fa fa-arrow-up"></i> <%= forecast_daily.temperature.max.round %>˚C
+      <i class="fa fa-arrow-down"></i> <%= forecast_daily.min.round %>˚C | <i class="fa fa-arrow-up"></i> <%= forecast_daily.max.round %>˚C
     </div>
   </a>
 </div>

@@ -20,8 +20,8 @@
       </div>
 
       <div class="day-description">
-        <%= icon_weather_for(@forecast_daily.weather.icon) %>
-        <span class="weather-desc"><%= @forecast_daily.weather.description.capitalize %></span>
+        <%= icon_weather_for(@forecast_daily.icon) %>
+        <span class="weather-desc"><%= @forecast_daily.description.capitalize %></span>
       </div>
     </div>
   </div>
@@ -87,14 +87,14 @@
         <div class="form-group">
           <label class="col-md-2 control-label text-right">Min:</label>
           <div class="">
-            <%= @forecast_daily.temperature.min.round %>˚C
+            <%= @forecast_daily.min.round %>˚C
           </div>
         </div>
 
         <div class="form-group">
           <label class="col-md-2 control-label text-right">Max:</label>
           <div class="">
-            <%= @forecast_daily.temperature.max.round %>˚C
+            <%= @forecast_daily.max.round %>˚C
           </div>
         </div>
       </div>
