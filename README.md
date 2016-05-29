@@ -33,3 +33,11 @@ filter: {
   city: String # Name of the city
 }
 ```
+
+## Tests
+
+The app uses **RSpec** to run the automated tests. Run the following command:
+
+```shell
+rake spec
+```
