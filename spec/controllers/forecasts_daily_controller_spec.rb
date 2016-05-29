@@ -3,10 +3,8 @@ require 'rails_helper'
 RSpec.describe ForecastsDailyController do
   describe "#show" do
     context "when has forecast_daily" do
-      let(:forecast_daily) { ForecastDaily.new(id: 1) }
-
       before do
-        allow(ForecastDailyService).to receive(:by_city_and_id).with("Fortaleza", "1") { forecast_daily }
+        allow(ForecastDailyService).to receive(:by_city_and_id) { ForecastDaily.new(id: 1, city: "Fortaleza") }
       end
 
       it "respond status :ok" do

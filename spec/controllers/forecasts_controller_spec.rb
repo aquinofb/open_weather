@@ -5,10 +5,8 @@ RSpec.describe ForecastsController do
   describe "#index" do
     context "when has params filter" do
       context "when has forecast for the city" do
-        let(:forecast) { Forecast.new }
-
         before do
-          allow(ForecastService).to receive(:by_city).with("XYZ") { forecast }
+          allow(ForecastService).to receive(:by_city) { Forecast.new }
         end
 
         it "respond status :ok" do
@@ -19,7 +17,7 @@ RSpec.describe ForecastsController do
 
       context "when has no forecast for the city" do
         before do
-          allow(ForecastService).to receive(:by_city) {nil}
+          allow(ForecastService).to receive(:by_city) { nil }
         end
 
         it "respond 404" do
