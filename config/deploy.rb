@@ -1,8 +1,8 @@
-server '23.20.100.45', port: 22, roles: [:web, :app, :db], primary: true
+server 'YOUR_IP', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:aquinofb/open_weather.git'
 set :application,     'open_weather'
-set :user,            'ubuntu'
+set :user,            'USER'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -21,16 +21,16 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 
-set :ssh_options, {
-  keys: ["#{Dir.pwd}/open-weather.pem"],
-  forward_agent: false,
-  user: 'ubuntu'
-}
+# set :ssh_options, {
+#   keys: ["#{Dir.pwd}/open-weather.pem"],
+#   forward_agent: false,
+#   user: 'ubuntu'
+# }
 
-set :default_env, {
-  'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
-  'OPENWEATHER_KEY' => ENV['OPENWEATHER_KEY'],
-}
+# set :default_env, {
+#   'SECRET_KEY_BASE' => ENV['SECRET_KEY_BASE'],
+#   'OPENWEATHER_KEY' => ENV['OPENWEATHER_KEY'],
+# }
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
