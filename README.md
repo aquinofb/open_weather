@@ -5,7 +5,7 @@
 [![Issue Count](https://codeclimate.com/github/aquinofb/open_weather/badges/issue_count.svg)](https://codeclimate.com/github/aquinofb/open_weather)
 [![Test Coverage](https://codeclimate.com/github/aquinofb/open_weather/badges/coverage.svg)](https://codeclimate.com/github/aquinofb/open_weather/coverage)
 
-App that consumes the API from [Open Weather Map](http://openweathermap.org/) and show 16 days forecast. Visit [weather.felipeaquinob.com.br](http://weather.felipeaquinob.com.br/).
+App that consumes the API from [Open Weather Map](http://openweathermap.org/) and show 16 days forecast.
 
 ## Configuration
 
